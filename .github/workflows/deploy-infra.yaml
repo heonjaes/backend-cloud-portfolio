@@ -13,6 +13,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      - name: Set AWS CloudFront Certificate ARN
+        env:
+          CLOUDFRONT_CERTIFICATE_ARN: ${{ secrets.AWS_CLOUDFRONT_CERTIFICATE_ARN }}
+        run: echo "CLOUDFRONT_CERTIFICATE_ARN=$CLOUDFRONT_CERTIFICATE_ARN" >> $GITHUB_ENV
+
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -26,6 +31,6 @@ jobs:
       - name: Terraform Apply
         run: |
           cd infrastructure
-          terraform apply -auto-approve
+          terraform apply -auto-approve -var "cloudfront_certificate_arn=$CLOUDFRONT_CERTIFICATE_ARN"
         env:
           AWS_DEFAULT_REGION: ap-southeast-2
