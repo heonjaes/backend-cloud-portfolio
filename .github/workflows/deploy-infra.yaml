@@ -13,6 +13,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      - name: Set AWS Credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $GITHUB_ENV
+
       - name: Set AWS CloudFront Certificate ARN
         env:
           CLOUDFRONT_CERTIFICATE_ARN: ${{ secrets.AWS_CLOUDFRONT_CERTIFICATE_ARN }}
@@ -31,6 +39,6 @@ jobs:
       - name: Terraform Apply
         run: |
           cd infrastructure
-          terraform apply -auto-approve -var "cloudfront_certificate_arn=$CLOUDFRONT_CERTIFICATE_ARN"
+          terraform apply -auto-approve -var "cloudfront_certificate_arn=$CLOUDFRONT_CERTIFICATE_ARN" -var "aws_access_key=$AWS_ACCESS_KEY_ID" -var "aws_secret_key=$AWS_SECRET_ACCESS_KEY"
         env:
           AWS_DEFAULT_REGION: ap-southeast-2
