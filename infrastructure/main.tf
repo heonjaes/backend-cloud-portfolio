@@ -8,9 +8,11 @@ terraform {
 }
 
 provider "aws" {
-  profile = var.aws_profile
-  region  = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region     = var.aws_region
 }
+
 
 # S3 Bucket
 resource "aws_s3_bucket" "website" {

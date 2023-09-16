@@ -1,7 +1,11 @@
-variable "aws_profile" {
-  description = "AWS profile to use for authentication."
+variable "aws_access_key" {
+  description = "AWS access key for authentication."
   type        = string
-  default     = "default"
+}
+
+variable "aws_secret_key" {
+  description = "AWS secret key for authentication."
+  type        = string
 }
 
 variable "aws_region" {
