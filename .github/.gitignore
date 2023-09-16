@@ -1,0 +1,4 @@
+# Terraform
+.infrastructure/
+terraform.tfstate
+terraform.tfstate.backup
