@@ -21,10 +21,6 @@ provider "aws" {
 
 # S3 
 
-module "s3_module" {
-  source = "./s3"
-}
-
 
 # Cloudfront
 resource "aws_cloudfront_origin_access_control" "resume" {
