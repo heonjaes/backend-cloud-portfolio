@@ -1,4 +1,10 @@
 terraform {
+  backend "s3" {
+    bucket = "heonjae-resume-tfstate"
+    region = "ap-southeast-2"                   
+    key    = "terraform.tfstate"
+    encrypt = true
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"

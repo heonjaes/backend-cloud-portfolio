@@ -3,6 +3,12 @@ variable "aws_access_key" {
   type        = string
 }
 
+variable "tf_state_bucket" {
+  description = "Name of the S3 bucket for Terraform state."
+  type        = string
+  default = "heonjae-resume-tfstate"
+}
+
 variable "aws_secret_key" {
   description = "AWS secret key for authentication."
   type        = string
