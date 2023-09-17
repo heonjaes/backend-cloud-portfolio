@@ -1,4 +1,9 @@
-# Terraform
-.infrastructure/
-terraform.tfstate
-terraform.tfstate.backup
+# Terraform .terraform directories
+**/.terraform/
+
+# Terraform .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Terraform crash log files
+crash.log
