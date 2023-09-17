@@ -22,7 +22,7 @@ provider "aws" {
 # S3 
 
 module "s3_module" {
-  source = "s3"
+  source = "./s3"
 }
 
 
