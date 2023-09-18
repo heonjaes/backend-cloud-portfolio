@@ -4,7 +4,7 @@
 
 ## Project Description
 
-The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastructure as code (IAC), AWS cloud services, and Terraform. This challenge involves building an automated cloud-native resume website hosted on AWS, featuring dynamic elements such as visitor tracking and integration with various AWS services.
+The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastructure as code (IAC), AWS cloud services, and Terraform. This challenge involves building an automated cloud-native resume website hosted on AWS, featuring dynamic elements such as visitor tracking and integration with various AWS services. It also incorporates CI/CD to automate the testing and deployment of cloud infrastructure. This challenge is inspired by Forrest Brazzeal https://cloudresumechallenge.dev/docs/the-challenge/aws/.
 
 
 ## Key Features
@@ -50,7 +50,6 @@ Prior to initiating the project, ensure these prerequisites are met:
 - **Code Editor or IDE**: Use a code editor or integrated development environment (IDE) for code writing and editing.
 
 - **IAC Understanding**: Grasp the concept of Infrastructure as Code (IAC) for Terraform usage.
-
 
 ## Contact
 
