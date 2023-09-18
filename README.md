@@ -28,10 +28,19 @@ The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastruct
 
 Prior to initiating the project, ensure these prerequisites are met:
 
-- Possession of an AWS account with appropriate permissions
-- Terraform installation on the local machine
-- Fundamental knowledge of AWS services (S3, CloudFront, Lambda, DynamoDB)
-- Familiarity with Git version control and a GitHub account
+- **AWS Account with Appropriate Permissions**: Set up an AWS account with necessary permissions for resource management.
+
+- **Terraform Installation**: Install Terraform on your local machine for defining and provisioning AWS infrastructure.
+
+- **AWS Services Knowledge**: Understand AWS services such as Amazon S3, Amazon CloudFront, AWS Lambda, DynamoDB, Amazon Route 53, and AWS IAM.
+
+- **Git for Version Control**: Use Git for version control and project collaboration.
+
+- **GitHub Account**: Have a GitHub account for hosting your project's repository.
+
+- **Code Editor or IDE**: Use a code editor or integrated development environment (IDE) for code writing and editing.
+
+- **IAC Understanding**: Grasp the concept of Infrastructure as Code (IAC) for Terraform usage.
 
 ## Installation and Usage
 
