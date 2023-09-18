@@ -51,6 +51,72 @@ Prior to initiating the project, ensure these prerequisites are met:
 
 - **IAC Understanding**: Grasp the concept of Infrastructure as Code (IAC) for Terraform usage.
 
+## Installation
+
+Before you begin, ensure that you have the following software requirements installed:
+
+- [Terraform](https://www.terraform.io/downloads.html) (v0.15.0)
+- [AWS CLI](https://aws.amazon.com/cli/) (v2.0.0 or higher)
+- [Python](https://www.python.org/downloads/release/python-390/) (v3.9.17)
+- Python Libraries:
+  - [pytest](https://pypi.org/project/pytest/)
+  - [boto3](https://pypi.org/project/boto3/)
+  - [json](https://pypi.org/project/jsonlib/)
+
+
+## Setup
+
+Follow these steps to set up and run the project:
+
+1. Clone the Repository
+
+   ```bash
+   git clone https://github.com/heonjaes/backend-cloud-portfolio.git
+   cd backend-cloud-portfolio
+   ```
+
+2. Set Up AWS Credentials
+
+   ```bash
+   export AWS_ACCESS_KEY_ID=[YOUR_AWS_ACCESS_KEY]
+   export AWS_SECRET_ACCESS_KEY=[YOUR_AWS_SECRET_KEY]
+   export CLOUDFRONT_CERTIFICATE_ARN=[ARN_OF_YOUR_ACM_CERTIFICATE]
+   ```
+
+Certainly! Here are the additional steps to set up a remote state file with an S3 bucket and add it to the Terraform code, followed by pushing the code:
+
+3. Set Up Terraform Remote State with S3 Bucket
+
+   Create an S3 bucket to store your Terraform state file remotely. Replace `[YOUR_UNIQUE_BUCKET_NAME]` with a globally unique bucket name:
+
+   ```bash
+   aws s3api create-bucket --bucket [YOUR_UNIQUE_BUCKET_NAME] --region [YOUR_AWS_REGION]
+   ```
+
+   Next, configure your Terraform backend to use the S3 bucket for remote state storage. Create a `backend.tf` file in your Terraform project directory and add the following content, replacing `[YOUR_UNIQUE_BUCKET_NAME]` and `[YOUR_AWS_REGION]` with your S3 bucket name and AWS region:
+
+   ```hcl
+   terraform {
+     backend "s3" {
+       bucket         = "[YOUR_UNIQUE_BUCKET_NAME]"
+       key            = "terraform.tfstate"
+       region         = "[YOUR_AWS_REGION]"
+     }
+   }
+   ```
+
+4. Push Your Terraform Code to Version Control
+
+   Now, fill out all the relevant variable names in the terraform files. Commit your changes to your local Git repository and push them to your remote repository (e.g., GitHub) to keep your Terraform code under version control. Follow these commands:
+
+   ```bash
+   git add .
+   git commit -m "Add Terraform backend configuration for remote state"
+   git push origin main  # Replace 'main' with your branch name if it's different
+   ```
+
+   This will update your remote repository with the latest changes, including the Terraform backend configuration.
+
 ## Contact
 
 For inquiries or feedback, reach out through the following channels:
@@ -58,4 +124,7 @@ For inquiries or feedback, reach out through the following channels:
 - Email: heonjae.shin00@mail.com
 - Linkedin: https://www.linkedin.com/in/heonjae-shin-933a4a208/
 - GitHub: [Your GitHub Profile](https://github.com/heonjaes)
+
+## Acknowledgments
+We extend our thanks to the open-source community and AWS for providing the tools and resources that made this project possible.
 
