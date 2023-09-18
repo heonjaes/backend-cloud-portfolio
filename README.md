@@ -6,29 +6,38 @@
 
 The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastructure as code (IAC), AWS cloud services, and Terraform. This challenge involves building an automated cloud-native resume website hosted on AWS, featuring dynamic elements such as visitor tracking and integration with various AWS services.
 
-### Key Features
 
-- **Static Website Hosting**: Utilizes Amazon S3 for static content storage, ensuring scalability and high availability.
+## Key Features
 
-- **Content Delivery**: Leverages Amazon CloudFront as a content delivery network (CDN) to offer globally low-latency, high-performance website access.
+- **Website Hosting**
+  - Amazon S3: Utilizes Amazon S3 for static content storage, ensuring scalability and high availability.
+  - Amazon CloudFront: Leverages Amazon CloudFront as a content delivery network (CDN) to offer globally low-latency, high-performance website access.
+  - Amazon Route 53: Configures Amazon Route 53 to associate a custom domain name (resume.heonjaeshin.com) with the CloudFront distribution.
+  - AWS Certificate Manager (ACM): Provides SSL/TLS certificates for secure connections.
 
-- **Serverless Visitor Counter**: Implements a serverless visitor counter through AWS Lambda and DynamoDB, tracking and displaying website visitor counts.
+- **Serverless Visitor Counter**
+  - AWS Lambda: Implements a serverless visitor counter using AWS Lambda for serverless computing.
+  - Amazon DynamoDB: Uses Amazon DynamoDB for serverless NoSQL database storage.
+  
+- **Infrastructure as Code**
+  - Terraform: Manages AWS resources efficiently with Terraform, enabling infrastructure definition and versioning as code.
+  
+- **Secure Access**
+  - AWS IAM (Identity and Access Management): Enforces secure AWS access and permissions through IAM roles and policies.
 
-- **Infrastructure as Code**: Manages AWS resources efficiently with Terraform, enabling infrastructure definition and versioning as code.
+- **CI/CD Integration**
+  - GitHub Actions: Establishes CI/CD pipelines using GitHub Action
+  - Automated testing of lambda function using pytest
+  - Automated deployment of AWS infrastructure
 
-- **Secure Access**: Enforces secure AWS access and permissions through IAM (Identity and Access Management) roles and policies.
-
-- **CI/CD Integration**: Establishes CI/CD pipelines, automating deployments and updates using tools like GitHub Actions or AWS CodePipeline.
-
-- **Custom Domain**: Configures Amazon Route 53 to associate a custom domain name (e.g., resume.yourname.com) with your CloudFront distribution.
-
-- **Documentation**: Maintains comprehensive and organized documentation for project clarity and collaboration.
 
 ## Prerequisites
 
 Prior to initiating the project, ensure these prerequisites are met:
-
-- **AWS Account with Appropriate Permissions**: Set up an AWS account with necessary permissions for resource management.
+- **Environmenta Variables Setup for AWS IAM Access**: Set up local CLI with environmental variables:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - CLOUDFRONT_CERTIFICATE_ARN
 
 - **Terraform Installation**: Install Terraform on your local machine for defining and provisioning AWS infrastructure.
 
