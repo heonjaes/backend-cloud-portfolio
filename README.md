@@ -37,10 +37,6 @@ Prior to initiating the project, ensure these prerequisites are met:
 
 For detailed installation and usage instructions, refer to the [Installation Guide](/docs/installation.md).
 
-## Contribution
-
-Contributions to the project are encouraged. Follow the guidelines outlined in the [Contribution Guide](/docs/contributing.md) if you wish to contribute.
-
 ## License
 
 This project operates under the MIT License. Review the [LICENSE](/LICENSE) file for specifics.
@@ -53,9 +49,7 @@ Appreciation is extended to the open-source community and AWS for the resources 
 
 For inquiries or feedback, reach out through the following channels:
 
-- Email: your@email.com
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
+- Email: heonjae.shin00@mail.com
+- Linkedin: https://www.linkedin.com/in/heonjae-shin-933a4a208/
+- GitHub: [Your GitHub Profile](https://github.com/heonjaes)
 
----
-
-Please replace placeholders like `/path/to/your/logo.png`, `your@email.com`, and `[Your GitHub Profile]` with your actual details and resources. This version provides a concise, third-person overview of the AWS Cloud Resume Challenge project, making it accessible to others while maintaining a professional tone.
