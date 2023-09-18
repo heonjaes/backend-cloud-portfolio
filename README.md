@@ -34,7 +34,7 @@ The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastruct
 ## Prerequisites
 
 Prior to initiating the project, ensure these prerequisites are met:
-- **Environmenta Variables Setup for AWS IAM Access**: Set up local CLI with environmental variables:
+- **Environmental Variables Setup for AWS IAM Access**: Set up local CLI with environmental variables for AWS IAM user and cloudfront details:
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   - CLOUDFRONT_CERTIFICATE_ARN
@@ -51,17 +51,6 @@ Prior to initiating the project, ensure these prerequisites are met:
 
 - **IAC Understanding**: Grasp the concept of Infrastructure as Code (IAC) for Terraform usage.
 
-## Installation and Usage
-
-For detailed installation and usage instructions, refer to the [Installation Guide](/docs/installation.md).
-
-## License
-
-This project operates under the MIT License. Review the [LICENSE](/LICENSE) file for specifics.
-
-## Acknowledgments
-
-Appreciation is extended to the open-source community and AWS for the resources that facilitated this project's creation.
 
 ## Contact
 
