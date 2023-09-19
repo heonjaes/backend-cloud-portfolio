@@ -1,7 +1,7 @@
 import json
 import boto3
 from unittest.mock import MagicMock
-from lambda_function import lambda_handler  
+from lambda4dynamodb import lambda_handler  
 
 # Create a mock DynamoDB table
 mock_table = MagicMock()
