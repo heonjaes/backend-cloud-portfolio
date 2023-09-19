@@ -4,9 +4,10 @@ import os
 
 os.environ['AWS_DEFAULT_REGION'] = 'ap-southeast-2'
 dynamodb = boto3.resource('dynamodb')
+view_table = dynamodb.Table("resume-count-table")
 
-def lambda_handler(event, context, table_name = 'resume-count-table'):
-    table = dynamodb.Table(table_name)
+
+def lambda_handler(event, context, table = view_table):
 
     response = table.get_item(Key={
         'ID':'0'
