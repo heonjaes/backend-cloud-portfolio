@@ -9,12 +9,12 @@ view_table = dynamodb.Table("resume-count-table")
 def lambda_handler(event, context, table=view_table):
 
     response = table.get_item(Key={
-        'ID':'0'
+        'ID': '0'
     })
     views = response['Item']['visit_count']
     views = views + 1
     response = table.put_item(Item={
-            'ID':'0',
+            'ID': '0',
             'visit_count': views
     })
 
