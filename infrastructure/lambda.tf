@@ -1,11 +1,11 @@
 # Lambda
 resource "aws_lambda_function" "lambda_py" {
-  filename         = "lambda/lambda4dynamodb.zip"
+  filename         = "lambda/get_count.zip"
   function_name    = var.lambda_function_name
   role             = aws_iam_role.assume_policy.arn
   runtime          = "python3.9"
-  handler          = "lambda4dynamodb.lambda_handler"
-  source_code_hash = filebase64sha256("lambda/lambda4dynamodb.zip")
+  handler          = "get_count.lambda_handler"
+  source_code_hash = filebase64sha256("lambda/get_count.zip")
 }
 
 resource "aws_iam_role" "assume_policy" {
