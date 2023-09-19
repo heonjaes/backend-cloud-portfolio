@@ -22,7 +22,8 @@ jobs:
         run: |
           pip install pytest
           pip install boto3
-          pip install unittest
+          pip install unittest2
+          pip install mock
 
       - name: Run tests
         run: pytest
