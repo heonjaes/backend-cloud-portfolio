@@ -1,0 +1,25 @@
+name: Test Lambda Function
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        pip install pytest
+        pip install boto3
+
+    - name: Run tests
+      run: |
+        pytest infrastructure/lambda/test_lambda_function.py

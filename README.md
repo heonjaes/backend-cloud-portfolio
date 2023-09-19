@@ -8,6 +8,14 @@ The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastruct
 
 
 ## Key Features
+- **Infrastructure as Code (IaC)**
+  - Terraform: Manages AWS resources efficiently with Terraform, enabling infrastructure definition and versioning as code.
+  - Remote S3 State File to track and automate deployment
+
+- **Serverless Visitor Counter**
+  - AWS Lambda: Implements a serverless visitor counter using AWS Lambda for serverless computing.
+  - Amazon DynamoDB: Uses Amazon DynamoDB for serverless visit count
+  - API Gateway: Integrates with API Gateway to invoke a Lambda function for retrieving and updating visitor counts in DynamoDB.
 
 - **Website Hosting**
   - Amazon S3: Utilizes Amazon S3 for static content storage, ensuring scalability and high availability.
@@ -15,13 +23,6 @@ The AWS Cloud Resume Challenge with Terraform showcases expertise in infrastruct
   - Amazon Route 53: Configures Amazon Route 53 to associate a custom domain name (resume.heonjaeshin.com) with the CloudFront distribution.
   - AWS Certificate Manager (ACM): Provides SSL/TLS certificates for secure connections.
 
-- **Serverless Visitor Counter**
-  - AWS Lambda: Implements a serverless visitor counter using AWS Lambda for serverless computing.
-  - Amazon DynamoDB: Uses Amazon DynamoDB for serverless NoSQL database storage.
-  
-- **Infrastructure as Code**
-  - Terraform: Manages AWS resources efficiently with Terraform, enabling infrastructure definition and versioning as code.
-  
 - **Secure Access**
   - AWS IAM (Identity and Access Management): Enforces secure AWS access and permissions through IAM roles and policies.
 
